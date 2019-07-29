@@ -1,7 +1,8 @@
 import os
 
-DB_URL = 'mysql://root:@localhost:3306/test?charset=utf8'
+DB_URL = 'mysql://root:qq111111@localhost:3306/test?charset=utf8'
 REDIS_URL = 'redis://localhost:6379'
+REDIS_PASSWORD = 'yuan'
 DEBUG = False
 WTF_CSRF_SECRET_KEY = 123
 AUTH_LOGIN_ENDPOINT = 'index.login'

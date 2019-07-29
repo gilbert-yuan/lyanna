@@ -107,7 +107,7 @@ async def setup_context(request):
     loop = asyncio.get_event_loop()
     if redis is None:
         redis = await aioredis.create_redis_pool(
-            config.REDIS_URL, minsize=5, maxsize=20, loop=loop)
+            config.REDIS_URL, minsize=5, maxsize=20, password=config.REDIS_PASSWORD, loop=loop)
     context.set('redis', redis)
     context.set('memcache', client)
 

@@ -105,7 +105,7 @@ class BaseModel(Model, metaclass=ModelMeta):
                 # Hack for debug mode
                 loop = asyncio.get_event_loop()
                 redis = await aioredis.create_redis_pool(
-                    config.REDIS_URL, minsize=5, maxsize=20, loop=loop)
+                    config.REDIS_URL, minsize=5, maxsize=20, password=config.REDIS_PASSWORD, loop=loop)
             _redis = redis
         return _redis
 
